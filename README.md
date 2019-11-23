@@ -1,5 +1,6 @@
 # Max Kelly - Work Book Answers 
 
+
 ### Q1: Describe the architecture of a typical Rails application
 
 - A typical Rails application is broken up into a number of sections. 
