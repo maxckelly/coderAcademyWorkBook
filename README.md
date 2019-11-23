@@ -44,7 +44,7 @@ Source control is particularly managed through Git which is a version control sy
 
 ### Q5: Provide an overview and description of a standard software testing process 100 - 200w
 
-- While many organisations have slightly different standards to improve the quality of their software below is some general standards you can take to ensure the quality of your product is kept at a standard. A standard software testing process is ISO/IEC 9126 
+- While many organisations have slightly different standards to improve the quality of their software below is some general standards you can take to ensure the quality of your product is kept at a standard. There are a number of software testing programs such as IEEE 1059 - Which is testing and guiding of verification and validation of the software users. IEEE 730 is the standard to deal with the products quality and assurance and ensure that the product is up to a standard which the user can operate without any session ending bugs/issues. Finally the IEEE 12207 is the standard that guides in proper life cycle processes of both data and software. 
 
 ### Q6: Discuss and analyse requirements related to information system security 100 - 200w
 - Information system security (INFOSEC) refers to the process of keeping information confidential, available and assuring its integrity. As well as this it also refers to and has relation to access controls and preventing unauthorized personnel from entering the system. Protecting all information and whatever state it is in e.g. an email or storage area, finally the detection and documentation of breaches in the system. The basic requirements for INFOSEC is:
@@ -123,16 +123,21 @@ To obeyed by APP you must implement practices and systems to ensure you can hand
 
 ### Q14: Conduct research into a marketplace website (app) and answer the following parts: 50 - 100 per part 
   a. What software is used by the app? 
-   - The software which www.revelthat.com is using is React.js as its framework, Javascript, Node.js, MongoDB. The version control that it is using is BitBucket. 
+  - The software which www.revelthat.com is using is React.js as its framework, Javascript, Node.js, MongoDB as a database. The version control that it is using is BitBucket.
   b. What hardware is used by the app?
-    - 
+  - Revel is across both mobile and desktop as well as tablet. Revel is AWS for hosting and domain, 
   c. Describe the interaction of technologies within the app
-    - 
+  - Revel uses Stripe as a payment system this is done through Stripes connect feature. They also use AWS to host their domain and they deploy to Heroku. Along with this they have a number of other integrations such as Campaign monitor for email sending, mailgun, and Chatkit for an online messaging system.  
   d. Describe the way data is structured within the app
-    - The site is broken up into two sections.
+  - Firstly Revel has a table of users. The user table collects data such as First and last name, mobile number, email, company name(optional), password and more. Within the app there is also the event host and event service table allowing the user to select what role they want to play in the marketplace. For bookings and payment there is the event table allowing the event host to create events, the booking tables which allows the service to be booked for a particular event and finally the payment table which assigns the price and data for payment. 
   e. Identify entities which must be tracked by the app
+  - d 
   f. Identify the relationships and associations between the entities you have identified in part (e)
+  - The relationships within Revel are: 
+    - User table: Each user has one event service or event host. As well as every service and host must have a user assigned to it.  From there each event host or event service can have many events and the event service can have many bookings. Each booking then has many one payment with the serviceID and eventID assigned to it.
   g. Design a schema using an Entity Relationship Diagram (ERD) appropriate for the database of this website (assuming a relational database model)
+
+  ![ERD](./docs/ERD.png)
 
 
 #### References:
