@@ -125,13 +125,12 @@ To obeyed by APP you must implement practices and systems to ensure you can hand
   a. What software is used by the app? 
   - The software which www.revelthat.com is using is React.js as its framework, Javascript, Node.js, MongoDB as a database. The version control that it is using is BitBucket.
   b. What hardware is used by the app?
-  - Revel is across both mobile and desktop as well as tablet. Revel is AWS for hosting and domain, 
+  - Revel is across both mobile and desktop as well as tablet. Revel is AWS for its domain and heroku for its hosting and development. It also used Bitbucket to manage version control.  
   c. Describe the interaction of technologies within the app
   - Revel uses Stripe as a payment system this is done through Stripes connect feature. They also use AWS to host their domain and they deploy to Heroku. Along with this they have a number of other integrations such as Campaign monitor for email sending, mailgun, and Chatkit for an online messaging system.  
   d. Describe the way data is structured within the app
   - Firstly Revel has a table of users. The user table collects data such as First and last name, mobile number, email, company name(optional), password and more. Within the app there is also the event host and event service table allowing the user to select what role they want to play in the marketplace. For bookings and payment there is the event table allowing the event host to create events, the booking tables which allows the service to be booked for a particular event and finally the payment table which assigns the price and data for payment. 
   e. Identify entities which must be tracked by the app
-  - d 
   f. Identify the relationships and associations between the entities you have identified in part (e)
   - The relationships within Revel are: 
     - User table: Each user has one event service or event host. As well as every service and host must have a user assigned to it.  From there each event host or event service can have many events and the event service can have many bookings. Each booking then has many one payment with the serviceID and eventID assigned to it.
